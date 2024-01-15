@@ -1,5 +1,4 @@
 .*
-!.devcontainer
 !.gitignore
 *.d
 *.o
@@ -13,4 +12,7 @@
 *.exe
 *.out
 build
+
+!.devcontainer
+!.github
 dist
