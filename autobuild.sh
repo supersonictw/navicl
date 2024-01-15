@@ -8,7 +8,7 @@ if [ "$EUID" != 0 ]; then
 fi
 
 $SUDO apt-get install -y \
-    cmake mesa-common-dev rpm \
+    build-essential cmake mesa-common-dev rpm \
     rocm-device-libs libamd-comgr-dev libhsa-runtime-dev
 
 WORKDIR="$(pwd)"
