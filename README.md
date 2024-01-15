@@ -38,7 +38,7 @@ Therefore, it will a directory `dist` created, install all the `rocm-*.deb` pack
 
 ```sh
 cd dict/
-deb -i rocm-*.deb
+dpkg -i rocm-*.deb
 ```
 
 Try `clifo` to verify the installiation.
