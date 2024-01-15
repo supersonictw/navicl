@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 set -e
 
@@ -34,7 +34,7 @@ make -j$(nproc)
 mkdir -p "$BUILD_BASE_DIR_OPENCL"
 cd "$BUILD_BASE_DIR_OPENCL"
 cmake \
-    -DUSE_COMGR_LIBRARY=ON \
+    -DUSE_COMGR_LIBRARY="ON" \
     -DCMAKE_PREFIX_PATH="$BUILD_BASE_DIR_CLR" \
     -DROCCLR_PATH="$ROCCLR_PATH" \
     -DCMAKE_BUILD_TYPE="Release" \

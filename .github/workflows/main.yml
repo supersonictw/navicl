@@ -14,10 +14,5 @@ jobs:
       - name: Checkout 🛎️
         uses: actions/checkout@v4
 
-      - name: Install sudo 📎
-        run: |
-          apt-get update
-          apt-get install -y sudo
-
       - name: Run autobuild.sh 🚀
         run: sh autobuild.sh

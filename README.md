@@ -19,7 +19,7 @@ Thanks to [AMD ROCm](https://github.com/ROCm) make AMD Radeon work on maching le
 Please uninstall `mesa-opencl-icd` due to conflicting AMD ROCm OpenCL.
 
 ```sh
-sudo apt purge mesa-opencl-icd
+apt-get purge mesa-opencl-icd
 ```
 
 ## Installtion
@@ -31,10 +31,10 @@ Install AMD ROCm OpenCL Runtime on your Debian.
 There is a `autobuild.sh`, it will help you install build dependencies, and build OpenCL automaticlly.
 
 ```sh
-sh autobuild.sh
+bash autobuild.sh
 ```
 
-Therefore, it will a directory `dist` created, install all the `*.deb` package.
+Therefore, it will a directory `dist` created, install all the `rocm-*.deb` package.
 
 ```sh
 cd dict/
