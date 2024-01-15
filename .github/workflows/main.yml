@@ -23,6 +23,6 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: dist/rocm-*.deb
           file_glob: true
-          release_name: ${{ github.ref }}
+          release_name: ${{ github.ref_name }}
           tag: ${{ github.ref }}
           overwrite: true
