@@ -6,7 +6,7 @@ on:
       - bookworm-release
 
 jobs:
-  build-and-deploy:
+  autobuild:
     runs-on: ubuntu-latest
     container:
       image: debian:bookworm
@@ -15,4 +15,4 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Run autobuild.sh 🚀
-        run: sh autobuild.sh
+        run: bash autobuild.sh
