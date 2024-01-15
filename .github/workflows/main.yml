@@ -3,13 +3,13 @@ name: Main workflow
 on:
   push:
     branches:
-      - main
+      - bookworm-release
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     container:
-      image: debian:12
+      image: debian:bookworm
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v4
