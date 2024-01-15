@@ -9,8 +9,8 @@ fi
 
 $SUDO apt-get update
 $SUDO apt-get install -y \
-    build-essential cmake mesa-common-dev rpm \
-    rocm-device-libs libamd-comgr-dev libhsa-runtime-dev
+    build-essential cmake mesa-common-dev \
+    libamd-comgr-dev libhsa-runtime-dev libamdhip64-dev
 
 WORKDIR="$(pwd)"
 
@@ -25,7 +25,6 @@ PKG_DIST_DIR="$WORKDIR/dist"
 mkdir -p "$BUILD_BASE_DIR_CLR"
 cd "$BUILD_BASE_DIR_CLR"
 cmake \
-    -DOPENCL_DIR="$OPENCL_DIR" \
     -DCMAKE_INSTALL_PREFIX="/opt/rocm/rocclr" \
     -DCMAKE_BUILD_TYPE="Release" \
     "$ROCCLR_PATH"
@@ -38,8 +37,6 @@ cmake \
     -DCMAKE_PREFIX_PATH="$BUILD_BASE_DIR_CLR" \
     -DROCCLR_PATH="$ROCCLR_PATH" \
     -DCMAKE_BUILD_TYPE="Release" \
-    -DCPACK_BINARY_RPM="off" \
-    -DCPACK_ICD_RPM="off" \
     "$OPENCL_DIR"
 make -j$(nproc)
 make package
