@@ -50,9 +50,9 @@ if(NOT WIN32)
 find_package(ROCM QUIET CONFIG PATHS /opt/rocm)
 if(ROCM_FOUND)
   include(ROCMSetupVersion)
-  rocm_setup_version( VERSION "2.0.0" )
+  rocm_setup_version( VERSION "5.2.0" )
 else()
-  set(PROJECT_VERSION "2.0.0")
+  set(PROJECT_VERSION "5.2.0")
 endif()
 
 #set a name for icd file
