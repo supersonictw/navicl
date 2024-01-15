@@ -6,7 +6,7 @@ on:
       - bookworm-release
 
 jobs:
-  autobuild:
+  build-release:
     runs-on: ubuntu-latest
     container:
       image: debian:bookworm
@@ -16,3 +16,10 @@ jobs:
 
       - name: Run autobuild.sh 🚀
         run: bash autobuild.sh
+
+      - name: Upload to release ✅
+        uses: JasonEtco/upload-to-release@master
+        with:
+          args: dist/rocm-*.deb
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
