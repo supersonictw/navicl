@@ -37,7 +37,7 @@ bash autobuild.sh
 Therefore, it will a directory `dist` created, install all the `rocm-*.deb` package.
 
 ```sh
-cd dict/
+cd dist/
 dpkg -i rocm-*.deb
 ```
 
