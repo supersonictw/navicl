@@ -26,6 +26,23 @@ apt-get purge mesa-opencl-icd
 
 Install AMD ROCm OpenCL Runtime on your Debian.
 
+### Use pre-built binaries
+
+Dowload all `rocm-*.deb` files from [releases](https://github.com/supersonictw/navicl/releases),
+then install all the files.
+
+```sh
+apt-get install -yf ./rocm-*.deb
+```
+
+It will install all the things requrired automaticlly.
+
+Try `clifo` to verify the installiation.
+
+```sh
+clinfo
+```
+
 ### Run autobuild.sh
 
 There is a `autobuild.sh`, it will help you install build dependencies, and build OpenCL automaticlly.
